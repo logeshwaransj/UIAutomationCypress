@@ -1,5 +1,7 @@
 import BaseClass from "./Base";
+import HomePageLocators from "../Locators/HomePageLocators";
 const data = require("../../fixtures/example.json");
+var locators = new HomePageLocators();
 
 class HomePage extends BaseClass {
 	openURL ()
@@ -10,9 +12,10 @@ class HomePage extends BaseClass {
 	
 	Login()
 	{
-		cy.get('input#username').type(data.user)
-		cy.get('input#password').type(data.pass)
-		cy.get('button#submit').click()
+		BaseClass.logMessage("test");
+		cy.get(locators.userNameinput).type(data.user)
+		cy.get(locators.passWordinput).type(data.pass)
+		cy.get(locators.loginButton).click()
 	}
 	
 	CheckLoginURL()
