@@ -3,8 +3,9 @@ const HomePage = require ('../PageHelpers/HomePage');
 describe('My First Test for MM', () => {
   it('open URL for Dev!', () => {
 		HomePage.openURL();
-		HomePage.CheckLoginURL();
+		
 		HomePage.Login();
+		HomePage.CheckLoginURL();
 	})
 })
 
